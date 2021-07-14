@@ -1,0 +1,118 @@
+#
+# Registro.br - Homologação EPP
+#
+# Instruções e documentação para preenchimento no final do arquivo
+#                 ATENÇÃO - LEIA TODAS AS INSTRUÇÕES
+#----------------------------[corte aqui]------------------------------
+
+# Dados do Provedor de Serviços
+1a. CNPJ:
+1b. Razão Social:
+1c. Nome:
+1d. Web site SAC:
+1e. Tel SAC:
+1f. Email SAC:
+1g. Responsável:
+1h. Telefone:
+1i. Endereço:
+1j. Compl:
+1k. CEP:
+1l. Cidade:
+1m. Estado:
+
+# ID para contato técnico no registro.br
+# Este ID deve estar cadastrado no site http://beta.registro.br
+2.  Código do Usuário:
+
+# Endereço IP para conexão ao servidor EPP
+3.  Endereço:
+
+# Cliente EPP
+4.  [ ] epp-rtk +extensões
+    [ ] libepp-nicbr
+    [ ] namestore +extensões
+    [ ] outros:
+
+5.  [ ] Habilitar o provedor para o registro de domínios EMP.BR
+
+6.  Comentários:
+
+#----------------------------[corte aqui]------------------------------
+
+***********************************************************************
+*                                                                     *
+*                   Instruções para preenchimento                     *
+*                                                                     *
+***********************************************************************
+Verifique também o exemplo do formulário preenchido no final do arquivo.
+
+Todo o formulário deve ser enviado diretamente no corpo do email em
+formato texto para epp-suporte@registro.br. As informações da conta do
+provedor de serviços no ambiente de homologação serão enviadas para o
+email do contato informado acima. O assunto da mensagem deve conter o
+nome escolhido no item 1c do formulário.
+
+Descrição dos Itens:
+
+(1) Dados completos do Provedor de Serviços
+    O Nome pode ter somente uma palavra de até 25 caracteres e será
+    utilizado para identificar o provedor perante os usuários do
+    sistema. Este nome não poderá ser alterado posteriormente.
+(2) ID do responsável técnico. Para informações sobre o cadastro de
+    IDs verifique o tutorial em:
+    https://registro.br/ajuda/tutoriais-administrativos/abrindo-uma-conta/
+    Este ID deve ser cadastrado no site de testes:
+    https://beta.registro.br/cgi-bin/nicbr/login
+(3) Endereço IP do cliente EPP.
+(4) Cliente EPP. Deve implementar as extensões descritas em
+    https://ftp.registro.br/pub/libepp-nicbr/draft-neves-epp-brorg-02.txt
+    https://ftp.registro.br/pub/libepp-nicbr/draft-neves-epp-brdomain-02.txt
+(5) Domínios EMP.BR somente poderão ser registrados via EPP e através
+    de provedores que tenham assinado o MOU. Para o ambiente beta
+    basta assinalar este checkbox para fazer parte da simulação.
+(6) Comentários gerais sobre a sua implementação
+
+
+***********************************************************************
+*                                                                     *
+*                      Formulário/Email exemplo                       *
+*                                                                     *
+***********************************************************************
+  From: CTO <dogbert@eppserv.com.br>
+  To: epp-suporte@registro.br
+  Subject: 001EPPSERV - Conta para Homologacao EPP do Registro.br
+
+  # Dados do Provedor de Serviços
+  1a. CNPJ:          05.003.093/0001-02
+  1b. Razão Social:  EPP servicos de internet Ltda.
+  1c. Nome:          001EPPSERV
+  1d. Web site SAC:  http://support.eppserv.com.br/
+  1e. Tel SAC:       0800 345678
+  1f. Email SAC:     sac@eppserv.com.br
+  1g. Responsável:   Dogbert de Tal
+  1h. Telefone:      11 5555-5555
+  1i. Endereço:      Av. Renew, 51
+  1j. Compl:         13and
+  1k. CEP:           04322-000
+  1l. Cidade:        São Paulo
+  1m. Estado:        SP
+
+  # ID para contato técnico no registro.br
+  # Este ID deve estar cadastrado no site http://beta.registro.br
+  2.  Código do Usuário: HDF983
+
+  # Endereço IP para conexão ao servidor EPP (/32)
+  3.  Endereço:      192.168.3.5
+
+  # Cliente EPP
+  4.  [ ] epp-rtk +extensões
+      [ ] libepp-nicbr
+      [ ] namestore +extensões
+      [x] outros:    Implementação EPP interna segundo drafts .br
+
+  5.  [x] Habilitar o provedor para o registro de domínios EMP.BR
+
+  6.  Comentários:
+      A nossa implementação é supostamente aderente ao standard e aos
+      drafts publicados mas infelizmente ainda não tivemos testes de
+      interoperabilidade.
